@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kahoot by Bipra</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<script>
+    let score = 0;
+
+    function disableRadioButtons(radioName) {
+        let radios = document.getElementsByName(radioName);
+        for (let i = 0, r = radios, l = r.length; i < l; i++) {
+            r[i].disabled = true;
+        }
+    }
+
+    function disableSubmitButton(submitButtonName) {
+        document.getElementById(submitButtonName).setAttribute("disabled", true);
+    }
+
+    function check1() {
+        let q1Ans = document.querySelector('input[name="q1"]:checked').value;
+        if (!q1Ans) return;
+        disableRadioButtons("q1");
+        disableSubmitButton("q1Submit");
+        if (q1Ans === 'Kathmandu') {
+            document.getElementById('q1Result').innerText = 'Correct!';
+            document.getElementById('q1Result').className = 'bg-success text-white';
+            score = score + 10;
+        } else {
+            document.getElementById('q1Result').innerText = 'Wrong!';
+            document.getElementById('q1Result').className = 'bg-danger text-white';
+        }
+
+        document.getElementById('totalScore').innerText = score;
+    }
+
+    function check2() {
+        let q2Ans = document.querySelector('input[name="q2"]:checked').value;
+        if (!q2Ans) return;
+        disableRadioButtons("q2");
+        disableSubmitButton("q2Submit");
+        if (q2Ans === 'Tokyo') {
+            document.getElementById('q2Result').innerText = 'Correct!';
+            document.getElementById('q2Result').className = 'bg-success text-white';
+            score = score + 10;
+        } else {
+            document.getElementById('q2Result').innerText = 'Wrong!';
+            document.getElementById('q2Result').className = 'bg-danger text-white';
+        }
+
+        document.getElementById('totalScore').innerText = score;
+    }
+
+
+    function check3() {
+        let q3Ans = document.querySelector('input[name="q3"]:checked').value;
+        if (!q3Ans) return;
+        disableRadioButtons("q3");
+        disableSubmitButton("q3Submit");
+        if (q3Ans === 'Beijing') {
+            document.getElementById('q3Result').innerText = 'Correct!';
+            document.getElementById('q3Result').className = 'bg-success text-white';
+            score = score + 10;
+        } else {
+            document.getElementById('q3Result').innerText = 'Wrong!';
+            document.getElementById('q3Result').className = 'bg-danger text-white';
+        }
+
+        document.getElementById('totalScore').innerText = score;
+    }
+
+    function check4() {
+        let q4Ans = document.querySelector('input[name="q4"]:checked').value;
+        if (!q4Ans) return;
+        disableRadioButtons("q4");
+        disableSubmitButton("q4Submit");
+        if (q4Ans === 'Madrid') {
+            document.getElementById('q4Result').innerText = 'Correct!';
+            document.getElementById('q4Result').className = 'bg-success text-white';
+            score = score + 10;
+        } else {
+            document.getElementById('q4Result').innerText = 'Wrong!';
+            document.getElementById('q4Result').className = 'bg-danger text-white';
+        }
+
+        document.getElementById('totalScore').innerText = score;
+    }
+
+</script>
+<body>
+<div class="jumbotron text-center bg-primary text-white">
+    <h1>Kahoot by Bipra</h1>
+    <p>Enjoy playing my quiz!</p>
+    <label>Total score: </label>
+    <label id="totalScore"></label>
+</div>
+<div class="container">
+    <form class="form">
+        <div class="row">
+            <h3>1) What is the capital of Nepal?</h3>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="q1a" name="q1" value="Kathmandu">
+                <label class="custom-control-label" for="q1a">Kathmandu</label>
+            </div>
+            <div class="col-sm-3 form-group custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="q1b" name="q1" value="Lalitpur">
+                <label class="custom-control-label" for="q1b">Lalitpur</label>
+            </div>
+            <div class="col-sm-3 form-group custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="q1c" name="q1" value="Pokhara">
+                <label class="custom-control-label" for="q1c">Pokhara</label>
+            </div>
+            <div class="col-sm-3 form-group custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="q1d" name="q1" value="Pokhara">
+                <label class="custom-control-label" for="q1d">Bhaktapur</label>
+            </div>
+        </div>
+        <button id="q1Submit" class="btn btn-primary" onclick="check1()">Submit</button>
+        <label id="q1Result"></label>
+        <br>
+    </form>
+
+    <form>
+        <div class="row">
+            <h3>2) What is the capital of Japan?</h3><br>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 form-group custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="q2a" name="q2" value="Tokiyo">
+                <label class="custom-control-label" for="q2a">Tokiyo</label>
+            </div>
+            <div class="col-sm-3 form-group custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="q2b" name="q2" value="Tokio">
+                <label class="custom-control-label" for="q2b">Tokio</label>
+            </div>
+            <div class="col-sm-3 form-group custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="q2c" name="q2" value="Fukuwaka">
+                <label class="custom-control-label" for="q2c">Fukuwaka</label>
+            </div>
+            <div class="col-sm-3 form-group custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="q2d" name="q2" value="Tokyo">
+                <label class="custom-control-label" for="q2d">Tokyo</label>
+            </div>
+        </div>
+        <button id="q2Submit" class="btn btn-primary" onclick="check2()">Submit</button>
+        <label id="q2Result"></label>
+        <br>
+    </form>
+
+    <form>
+        <div class="row">
+            <h3>3) What is the capital of China?</h3><br>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 form-group custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="q3a" name="q3" value="Belgium">
+                <label class="custom-control-label" for="q3a">Belgium</label>
+            </div>
+            <div class="col-sm-3 form-group custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="q3b" name="q3" value="Beijing">
+                <label class="custom-control-label" for="q3b">Beijing</label>
+            </div>
+            <div class="col-sm-3 form-group custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="q3c" name="q3" value="Bancock">
+                <label class="custom-control-label" for="q3c">Bancock</label>
+            </div>
+            <div class="col-sm-3 form-group custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="q3d" name="q3" value="The Great wall of China">
+                <label class="custom-control-label" for="q3d">The Great wall of China</label>
+            </div>
+        </div>
+        <button id="q3Submit" class="btn btn-primary" onclick="check3()">Submit</button>
+        <label id="q3Result"></label>
+        <br>
+    </form>
+
+    <form>
+        <div class="row">
+            <h3>4) What is the capital of Spain?</h3><br>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 form-group custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="q4a" name="q4" value="Oslo">
+                <label class="custom-control-label" for="q4a">Oslo</label>
+            </div>
+            <div class="col-sm-3 form-group custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="q4b" name="q4" value="Ottowa">
+                <label class="custom-control-label" for="q4b">Ottowa</label>
+            </div>    
+            <div class="col-sm-3 form-group custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="q4c" name="q4" value="Madrid">
+                <label class="custom-control-label" for="q4c">Madrid</label>
+            </div>
+            <div class="col-sm-3 form-group custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="q4d" name="q4" value="Juneau">
+                <label class="custom-control-label" for="q4d">Juneau</label>
+            </div>
+        </div>
+        <button id="q4Submit" class="btn btn-primary" onclick="check4()">Submit</button>
+        <label id="q4Result"></label>
+        <br>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+body {
+    background-color: burlywood;
+}
+
+pre {
+    background-color: aquamarine;
+}
+
+.title {
+    font-size: xxx-large;
+    text-align: center;
+    color: red;
+    background-color: black;
+    border: blueviolet solid thick;
+    border-radius: 20px;
+}
+
+.largeImage {
+    width: 1200px;
+}
+
+.smallImage {
+    width: 600px;
+}
+
+.preborder {
+    border: crimson solid thin;
+    border-radius: 10px;
+}
+
+b {
+    text-shadow: 2px 3px 5px cadetblue;
+    font-size: xxx-large;
+}

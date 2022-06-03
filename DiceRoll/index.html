@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        button.dice {
+            position: absolute;
+            top: 25%;
+            left:50%;
+        }
+        img.dice {
+            position: absolute;
+            top: 50%;
+            left:50%;
+        }
+    </style>
+    <script>
+        var count = 0;
+        var myVar;
+        function myTimer() {
+            var dice1 = document.getElementById("dice1");
+            count++;
+            dice1.src='dice' + count + '.jpg';
+            if (count <= 6) {
+                return;
+            }
+
+            var d1 = Math.floor(Math.random() * 6) + 1;
+            dice1.src='dice' + d1 + '.jpg';
+
+            var die1 = document.getElementById("die");
+            die1.innerHTML = d1;
+            clearInterval(myVar);
+        }
+        function rollDice() {
+            count = 0;
+            myVar = setInterval(myTimer, 200);
+        }
+    </script>
+</head>
+<body>
+<div class="parent-div">
+    <div id="die">0</div>
+    <img id="dice1" class="dice" src="dice1.jpg" style="width:90px">
+    <button class="dice" onclick="rollDice()">Roll Dice</button>
+</div>
+</body>
+</html>
