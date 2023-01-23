@@ -4,10 +4,10 @@ const c = canvas.getContext("2d");
 const box = 32;
 
 const ground = new Image();
-ground.src = "img/ground.png";
+ground.src = "https://stackblitz.com/files/js-facfx8/github/bipradangol/awardspacebipraatwebpages/main/Snake/img/ground.png";
 
 const foodImg = new Image();
-foodImg.src = "img/food.png";
+foodImg.src = "https://stackblitz.com/files/js-facfx8/github/bipradangol/awardspacebipraatwebpages/main/Snake/img/food.png";
 
 let dead = new Audio();
 let eat = new Audio();
@@ -16,12 +16,12 @@ let right = new Audio();
 let left = new Audio();
 let down = new Audio();
 
-dead.src = "audio/dead.mp33";
-eat.src = "audio/eat.mp33";
-up.src = "audio/up.mp33";
-right.src = "audio/right.mp33";
-left.src = "audio/left.mp33";
-down.src = "audio/down.mp33";
+dead.src = "https://stackblitz.com/files/js-facfx8/github/bipradangol/awardspacebipraatwebpages/main/Snake/audio/dead.mp33";
+eat.src = "https://stackblitz.com/files/js-facfx8/github/bipradangol/awardspacebipraatwebpages/main/Snake/audio/eat.mp33";
+up.src = "https://stackblitz.com/files/js-facfx8/github/bipradangol/awardspacebipraatwebpages/main/Snake/audio/up.mp33";
+right.src = "https://stackblitz.com/files/js-facfx8/github/bipradangol/awardspacebipraatwebpages/main/Snake/audio/right.mp33";
+left.src = "https://stackblitz.com/files/js-facfx8/github/bipradangol/awardspacebipraatwebpages/main/Snake/audio/left.mp33";
+down.src = "https://stackblitz.com/files/js-facfx8/github/bipradangol/awardspacebipraatwebpages/main/Snake/audio/down.mp33";
 
 let food = {
     x:Math.floor(Math.random()*17+1)*box,

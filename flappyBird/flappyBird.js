@@ -7,11 +7,11 @@ var pipeSouth = new Image();
 var bird = new Image();
 var fg = new Image();
 
-bg.src = 'images/bg.png';
-pipeNorth.src = 'images/pipeNorth.png';
-pipeSouth.src = 'images/pipeSouth.png';
-bird.src = 'images/bird.png';
-fg.src = 'images/fg.png';
+bg.src = 'https://stackblitz.com/files/js-facfx8/github/bipradangol/awardspacebipraatwebpages/main/Snake/images/bg.png';
+pipeNorth.src = 'https://stackblitz.com/files/js-facfx8/github/bipradangol/awardspacebipraatwebpages/main/Snake/images/pipeNorth.png';
+pipeSouth.src = 'https://stackblitz.com/files/js-facfx8/github/bipradangol/awardspacebipraatwebpages/main/Snake/images/pipeSouth.png';
+bird.src = 'https://stackblitz.com/files/js-facfx8/github/bipradangol/awardspacebipraatwebpages/main/Snake/images/bird.png';
+fg.src = 'https://stackblitz.com/files/js-facfx8/github/bipradangol/awardspacebipraatwebpages/main/Snake/images/fg.png';
 
 var gravity = 1.5;
 var pipeX = 180;
